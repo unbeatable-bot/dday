@@ -29,6 +29,7 @@ function App() {
     if (savedTheme) setTheme(savedTheme);
   }, []);
 
+
   useEffect(() => {
     document.body.style.backgroundColor = themes[theme].backgroundColor;
     document.body.style.color = themes[theme].color;
@@ -39,7 +40,7 @@ function App() {
     return () => clearInterval(interval);
   }, [targetDate]);
 
-  const updateDday = () => {
+  const updateDday = () => { //업데이트
     if (!targetDate) return;
     const target = new Date(targetDate);
     const now = new Date();
